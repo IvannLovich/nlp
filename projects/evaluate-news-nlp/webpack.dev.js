@@ -15,10 +15,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.png/,
-        type: "asset/resource",
-      },
-      {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: "babel-loader",
@@ -26,6 +22,10 @@ module.exports = {
       {
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
       },
     ],
   },
