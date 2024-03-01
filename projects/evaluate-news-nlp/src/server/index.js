@@ -18,10 +18,6 @@ app.get("/", function (req, res) {
   res.sendFile(path.resolve("dist/index.html"));
 });
 
-// app.get("/test", function (req, res) {
-//   res.send(mockAPIResponse);
-// });
-
 app.post("/test", (req, res) => {
   const articleUrl = req.body.formText;
   console.log("Received data:", articleUrl);
