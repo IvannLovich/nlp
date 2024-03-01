@@ -1,43 +1,58 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Test</title>
-        <link rel="stylesheet" href="/styles/resets.css">
-        <link rel="stylesheet" href="/styles/base.css">
-        <link rel="stylesheet" href="/styles/header.css">
-        <link rel="stylesheet" href="/styles/form.css">
-        <link rel="stylesheet" href="/styles/footer.css">
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <title>Test</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
 
-    <body>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <img
+          src="images/nlp_img.png"
+          alt="A CPU with Natural Language Proccesing initials"
+        />
+      </div>
+      <nav class="header__navigation">
+        <a href="#" class="header__navigation-link">Home</a>
+        <a href="#" class="header__navigation-link">About</a>
+        <a href="#" class="header__navigation-link">Contact</a>
+      </nav>
+    </header>
 
-        <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
-        </header>
+    <div id="loader" class="loader-container hidden">
+      <div class="loader"></div>
+    </div>
+    <main class="main">
+      <section class="main__section main__section--form">
+        <form class="main__section--form">
+          <input
+            id="name"
+            class="main__section--form__input"
+            type="text"
+            name="input"
+            value=""
+            placeholder="Source"
+          />
+          <input
+            id="btn"
+            class="main__section--form__btn"
+            type="submit"
+            name=""
+            value="Submit"
+          />
+        </form>
+      </section>
 
-        <main>
-            <section>
-                <form class="" onsubmit="return handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return handleSubmit(event)" onsubmit="return handleSubmit(event)">
-                </form>
-            </section>
+      <section class="main__section main__section--results">
+        <strong class="main__section--results-title">Results:</strong>
+        <div id="results" class="main__section--results-content"></div>
+      </section>
+    </main>
 
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
-            </section>
-        </main>
-
-        <footer>
-            <p>This is a footer</p>
-        </footer>
-
-    </body>
+    <footer class="footer">
+      <p class="footer__text">Udacity <sup>&reg;</sup></p>
+    </footer>
+  </body>
 </html>

@@ -1,0 +1,12 @@
+// Import the partials
+@import "resets";
+@import "base";
+@import "header";
+@import "form";
+@import "footer";
+
+// Global styles
+body {
+  background-color: #f4f4f4;
+  color: #333;
+}

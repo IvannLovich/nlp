@@ -1,16 +1,7 @@
-function checkForName(inputText) {
-    console.log("::: Running checkForName :::", inputText);
-    let names = [
-        "Picard",
-        "Janeway",
-        "Kirk",
-        "Archer",
-        "Georgiou"
-    ]
+import validUrl from "valid-url";
 
-    if(names.includes(inputText)) {
-        alert("Welcome, Captain!")
-    }
+function checkForName(inputText) {
+  return validUrl.isWebUri(inputText);
 }
 
-export { checkForName }
+export { checkForName };
