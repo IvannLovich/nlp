@@ -20,8 +20,17 @@ function handleSubmit(event) {
 
   if (inputValidated) {
     content.style.opacity = 0.5;
+    console.log(
+      "Before updating loader class:",
+      loader.classList.contains("hidden")
+    );
     loader.classList.remove("hidden");
-    fetch("http://localhost:8081/test", {
+    console.log(
+      "After updating loader class:",
+      loader.classList.contains("hidden")
+    );
+
+    return fetch("http://localhost:8081/test", {
       method: "POST",
       body: JSON.stringify({ formText }),
       headers: { "Content-Type": "application/json" },
@@ -30,7 +39,12 @@ function handleSubmit(event) {
       .then((res) => {
         content.style.opacity = 1;
         loader.classList.add("hidden");
+        console.log(
+          "After updating loader class:",
+          loader.classList.contains("hidden")
+        );
         response = res;
+        console.log(response.data);
         const responseItems = [
           parameters.score_tag[response.data.score_tag],
           parameters.subjectivity[response.data.subjectivity],
