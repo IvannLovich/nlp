@@ -2,25 +2,27 @@
 
 ## Overview
 
-Welcome to the Natural Language Processing (NLP) project! This application leverages the MeaningCloud API to analyze sentiment in text content. The project includes a frontend developed with HTML, SCSS, and JavaScript, a Node.js backend for server-side operations, and the MeaningCloud API for NLP.
+Welcome to the Natural Language Processing (NLP) project! This application leverages the MeaningCloud API to analyze sentiment in text content. The project includes a frontend developed with HTML, SCSS, and TypeScript, a Node.Js backend for server-side operations, and the MeaningCloud API for NLP.
 
 ## Project Structure
 
 ### Frontend
 
-- **index.js:** The main JavaScript file orchestrating the interaction between user input, form submission, and API calls. It dynamically updates the webpage with NLP results and includes an image depicting Natural Language Processing.
+- **evaluate-news-nlp/frontend/src/client/index.ts** The main TypeScript file orchestrating the interaction between user input, form submission, and API calls. It dynamically updates the webpage with NLP results and includes an image depicting Natural Language Processing.
 
 ### Backend
 
-- **server/index.js:** The Node.js server file responsible for handling requests and interacting with the MeaningCloud API. Key functionalities include serving the HTML page, processing form submissions, and communicating with the MeaningCloud API to analyze sentiment.
+- **evaluate-news-nlp/backend/server.ts:** The Node server file responsible for handling requests and interacting with the MeaningCloud API. Key functionalities include serving the HTML page, processing form submissions, and communicating with the MeaningCloud API to analyze sentiment.
 
-### JavaScript Modules
+### TypeScript Modules
 
-- **formHandler.js:** Manages the form submission process, handles user input validation, and orchestrates API calls to MeaningCloud. It dynamically updates the webpage with sentiment analysis results.
-- **nameChecker.js:** Validates user input, specifically ensuring that the provided input is a valid URL using the `valid-url` library.
-- **responseMapping.js:** Maps the numerical results received from the MeaningCloud API to human-readable sentiment, subjectivity, and irony labels.
+- **formHandler.ts:** Manages the form submission process, handles user input validation, and orchestrates API calls to MeaningCloud. It dynamically updates the webpage with sentiment analysis results.
+- **nameChecker.ts:** Validates user input, specifically ensuring that the provided input is a valid URL using the `valid-url` library.
+- **responseMapping.ts:** Maps the numerical results received from the MeaningCloud API to human-readable sentiment, subjectivity, and irony labels.
 
 ## Getting Started
+
+Go to the project root: **project/evaluate-news-nlp**
 
 1. Install project dependencies:
 
@@ -29,10 +31,10 @@ Welcome to the Natural Language Processing (NLP) project! This application lever
 
    ```
 
-2. Start the development server:
+2. Start both development servers:
 
    ```bash
-   npm run build-dev
+   npm start
 
    ```
 
@@ -46,7 +48,7 @@ Welcome to the Natural Language Processing (NLP) project! This application lever
 
 ## MeaningCloud API Integration
 
-The project integrates the MeaningCloud API for sentiment analysis. The API key is included in the `server/index.js` file for easy access.
+The project integrates the MeaningCloud API for sentiment analysis. The API key is included in `backend/server.ts` file for easy access.
 
 ## Additional Notes
 
